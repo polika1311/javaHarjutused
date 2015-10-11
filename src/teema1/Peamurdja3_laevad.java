@@ -16,4 +16,46 @@ import java.util.Scanner;
  *    nii vertikaalselt kui ka horisontaalselt?
  */
 public class Peamurdja3_laevad {
+    public static void main(String[] args) {
+        int[] laud = {0, 1, 1, 0, 1, 0, 1};
+
+
+        Scanner kasutaja = new Scanner(System.in);
+
+        while (gameover(laud)) {
+            System.out.println("sisesta  number nullist kuueni");
+            int sisestus = kasutaja.nextInt();
+
+            if (laud[sisestus] == 0) {
+                System.out.println("Mööda!");
+            } else if (laud[sisestus] == 1) {
+                System.out.println("BUUUM!");
+                laud[sisestus] = 2;
+            } else if (laud[sisestus] == 2) {
+                System.out.println("jälle");
+            }
+
+
+        }
+
+        System.out.println("võit");
+
+
+    }
+
+
+    public static boolean gameover(int[] laud) {
+
+
+        for (int i = 0; i < laud.length; i++) {
+            if (laud[i] == 1) {
+                return true;
+            }
+
+        }
+        return false;
+
+    }
+
 }
+
