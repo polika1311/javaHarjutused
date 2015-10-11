@@ -28,8 +28,6 @@ public class Peamurdja1_foor extends Application {
         foor.vahetaPunast();
         foor.paus(2);
 
-
-        gittg
         int count = 0;
         while (count < 10) {
 
